@@ -475,7 +475,8 @@ grid-template-columns: 1fr 1fr;
 .team-coordinator{
     display: flex;
     padding: 5%;
-    
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
