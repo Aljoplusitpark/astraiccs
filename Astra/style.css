@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+html, body{
+    overflow-x: hidden;
+}
 body{
     background-image: url("media/bg.jpg");
     background-repeat: no-repeat;
@@ -8,6 +11,7 @@ body{
     background-color: #0000004b;
     font-weight: 900;
     font-family: "Syne",sans-serif;
+    position: relative;
 }
 .home-container{
     width: 100%;
@@ -550,13 +554,14 @@ span {
 
 .service h1{
 
-    font-size: 60px;
+    
     font-weight: 900;
 }
 
 .service a{
     text-decoration: none;
     color: white;
+    font-size: 40px;
 }
 
 p{
@@ -1183,7 +1188,10 @@ input[name="tab"]:checked + .tab-content{
     margin-top: 30px;
     font-weight: 100;
     text-align: justify;
+    font-size: 16px;
 }
+
+
 
 .ab{
     width: 100%;
@@ -1608,12 +1616,18 @@ input[name="tab"]:checked + .tab-content{
         text-align: center;
         margin-top: -180px;
         font-size: 50px;
+        justify-content: center;
+        align-items: center;
+    }
 
-        
+    .c1 img{
+        width: 50px;
+        height: auto;
     }
     
     .c2 p{
         margin-left: 30px;
+        font-size: 1.3rem;
     }
 
     .astralogo1{
@@ -1625,16 +1639,19 @@ input[name="tab"]:checked + .tab-content{
     .service{
     
         height: auto;
-        padding: 60px 25px 60px 0px;
+        padding: 60px 20px 60px 0px;
         color: white;
         text-align: left;
         margin-top: 130px;
         margin-left: 50px;
     
     }
+ 
 
-    .service h1{
-        font-size: 30px;
+   
+
+    .service h1 a{
+        font-size: 18px;
         padding-right: 30px;
     }
 
@@ -1654,6 +1671,12 @@ input[name="tab"]:checked + .tab-content{
     .aboutpara{
         text-align: center;
         padding: 0px;
+        font-size: 18px;
+    }
+
+    .address h4{
+    
+       font-size: 18px;
     }
 
     .about{
@@ -1700,7 +1723,7 @@ input[name="tab"]:checked + .tab-content{
     }
 
     .abtxt{
-        width: 400px;
+        width: 100%;
     }
 
     .abimg{
@@ -1708,7 +1731,8 @@ input[name="tab"]:checked + .tab-content{
     }
 
     .aboutimg{
-        width: 380px;
+        width: 80%;
+        display: none;
     }
 
     .card-body1{

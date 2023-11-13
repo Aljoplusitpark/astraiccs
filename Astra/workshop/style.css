@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+html, body{
+    overflow-x: hidden;
+}
+
 body{
     background-image: url("bg.jpg");
     background-repeat: no-repeat;
     width: 100%;
-    height: fit-content;
-    background-size: 100% 100%;
+    background-size: 100% 200%;
     background-color: #0000004b;
     font-weight: 900;
     color: aliceblue;
+    font-family: "Syne",sans-serif;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 .nav{
@@ -36,6 +48,11 @@ body{
     justify-content: right;
     text-align: right;
     color: white;
+}
+
+.brand h1{
+    font-size: 1.8rem;
+    font-weight: 800;
 }
 
 .marquee{
@@ -129,18 +146,18 @@ body{
 }
   
 .button{
-    height: 45px;
+    height: 50px;
     margin: 35px 0
   }
 .button input{
     height: 100%;
     width: 30%;
-    border-radius: 20px;
+    border-radius: 25px;
     justify-content: center;
     border: none;
     color: #000000;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -349,15 +366,131 @@ body{
 /* end footer */
 
 
+/* glitz */
+
+.glitz-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+    
+
+}
+
+.glitzbox{
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    background-color: rgba(247, 247, 247, 0.1);
+    border-radius: 20px;
+    padding: 60px;
+    display: flex;
+    margin-top: 50px;
+}
+
+
+
+.glitz-head{
+    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.glitz-head h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.glitz-head h5{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.glitz-head p{
+    font-size: 1rem;
+    font-weight: 200;
+    /* line-height: 0.7rem; */
+}
+
+.glitz-desc{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.glitz-img{
+    display: flex;
+    gap: 50px;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.glitz-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.glitz-container p{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+/* end glitz */
+
+/* the team */
+
+.team-social{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
+}
+
+.team-icons{
+    border-bottom: 1px solid white;
+}
+
+ .team-icons i{
+    font-size: 40px;
+    font-weight: 100;
+    padding: 40px;
+    
+}
+
+.team-icons a:hover{
+    color: #d8ee5f;
+}
+
+.team-mail{
+    padding: 5%;
+    border-bottom: 1px solid white;
+}
+
+.team-coordinator{
+    display: flex;
+    padding: 5%;
+    
+}
+
+
+
+/* end the team */
+
    /* mobile view */
 
-   @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
    
     .main{
 
         display: flexbox;
         flex-direction: column;
-        height: auto;
+        
         justify-content: space-around;
    
     }
@@ -367,8 +500,8 @@ body{
         padding: 15px;
     }
 
-    .button{
-        width: 380px;
+    .button input{
+        width: 80%;
     }
 
     .box2 {
@@ -395,5 +528,73 @@ body{
         text-align: left;
         line-height: 1.2;
     }
+
+    /* glitz  */
+
+    .glitz-head h1{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    .glitz-img{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: -20px;
+    }
+
+    .glitz-img img{
+        display: flex;
+        width: 50%
+        
+    }
+
+    .glitz-desc{
+        display: grid;
+        grid-template-columns:  1fr;
+        }
+
+    .glitzbox{
+        height: fit-content;
+        backdrop-filter: blur(15px);
+        background-color: rgba(247, 247, 247, 0.1);
+        border-radius: 20px;
+        padding: 40px;
+        width: 100vw;
+        display: flex;
+        margin-top: 50px;
+        }
+
+        .glitz-container p{
+            width: 80%;
+        }        
+    
+        
+
+    /* end glitz */
+
+    /* team */
+    
+    .ebox{
+        
+        padding: 40px;
+        display: flex;
+        width: 110%;
+        justify-content: center;
+    }
+
+    .team-icons{
+        display: flex;
+        font-weight: 100;
+
+    }
+
+    .team-icons i {
+        font-weight: 100;
+        gap: 40px;
+    }
+
+    /* end team */
 
    }
