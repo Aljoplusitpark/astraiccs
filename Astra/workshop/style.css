@@ -479,8 +479,28 @@ grid-template-columns: 1fr 1fr;
     justify-content: space-between;
 }
 
+.student-cor{
+    text-align: left;
+}
 
+.student-cor i{
+    font-size: 24px;
+}
 
+.staff-cor{
+    text-align: right;
+}
+
+.staff-cor i{
+    font-size: 40px;
+}
+
+.t1content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
 /* end the team */
 
    /* mobile view */
