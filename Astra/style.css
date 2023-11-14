@@ -1147,6 +1147,20 @@ input[name="tab"]:checked + .tab-content{
     margin-top: 20px;
 }
 
+
+.subform .btn btn-theme{
+    border-radius: 0 20px 20px 0;
+    background: #D9EE5F;
+    color: #000000;
+}
+
+.btn-theme:hover {
+    background-color: rgb(0, 0, 0);
+    color: #D9EE5F;
+    border: 1px solid #D9EE5F; /* Change text color on hover if needed */
+  }
+
+
 /* partners */
 
 
@@ -1415,6 +1429,10 @@ input[name="tab"]:checked + .tab-content{
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+}
+
+.footer{
+    background-color: #000000;
 }
 
 /* end footer */
