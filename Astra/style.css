@@ -544,11 +544,11 @@ span {
 }
 
 .service{
-    padding-top: 60px;
-    padding-right: 70px;
+    padding: 2rem;
+    padding-right: 5%;
     height: 500px;
     color: white;
-    /* text-align: left; */
+    text-align: right;
 
 }
 
@@ -1188,7 +1188,8 @@ input[name="tab"]:checked + .tab-content{
     margin-top: 30px;
     font-weight: 100;
     text-align: justify;
-    font-size: 16px;
+    font-size: 22px;
+    line-height: 1.6;
 }
 
 
@@ -1327,6 +1328,7 @@ input[name="tab"]:checked + .tab-content{
 
 .tabevent{
     padding: 30px 0px 10px 0;
+    display: none;
    
 }
 
@@ -1427,11 +1429,11 @@ input[name="tab"]:checked + .tab-content{
 /* end sponsers carousel */
 /* desktop view */
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
     .service{
-        display: none;
+        display: block;
     }
-}
+} */
 
 
 
