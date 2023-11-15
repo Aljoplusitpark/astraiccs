@@ -577,6 +577,10 @@ span {
     font-weight: 900;
 }
 
+.service a:hover{
+    color: #D9EE5F;
+}
+
 .service a{
     text-decoration: none;
     color: white;

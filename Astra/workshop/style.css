@@ -453,6 +453,24 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 }
 
+/* gamemaster */
+
+.game-desc{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    }
+
+.game-img{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end gamemaster */
+
 .glitz-img{
     display: flex;
     gap: 50px;
@@ -754,5 +772,10 @@ grid-template-columns: 1fr 1fr;
     }
 
     /* end team */
+
+    .game-desc{
+        display: grid;
+        grid-template-columns: 1fr;
+        }
 
    }
