@@ -242,12 +242,14 @@ a{
 /* COMPETITIONS */
 
 .chead{
-    padding: 20px 50px 0px 50px;
+    padding: 40px 50px 40px 50px;
+    border-bottom: 1px solid white;
 }
 
 .chead h1{
-    font-size: 60px;
+    font-size: 40px;
     text-align: right;
+    font-weight: 800;
 }
 
 .chead1{
@@ -255,9 +257,10 @@ a{
 }
 
 .chead1 h1{
-    font-size: 80px;
+    font-size: 60px;
     text-align: left;
-    line-height: 1;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
 .glam{
