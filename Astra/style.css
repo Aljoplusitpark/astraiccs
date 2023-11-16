@@ -565,7 +565,7 @@ span {
 .service{
     padding: 2rem;
     padding-right: 5%;
-    height: 500px;
+    height: auto;
     color: white;
     text-align: right;
 

@@ -22,41 +22,74 @@ h1 {
   font-weight: 800;
 }
 
-.nav {
+.nav{
   backdrop-filter: blur(15px);
   background-color: rgba(247, 247, 247, 0.1);
-  padding: 2px 50px 2px 50px;
+  padding: 5px 50px 5px 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  justify-content: center;
 }
 
 /* .navbar{
-    
-    height: auto;
-    padding: 20px 50px 20px 50px;
-    
-  } */
+  
+  height: auto;
+  padding: 20px 50px 20px 50px;
+  
+} */
 
-.logo {
+.logo{
   width: 49%;
-}
-
-.nav .logo img {
-  width: 100px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin-top: -20px;
-}
-
-.brand {
-  width: 49%;
-  justify-content: right;
   text-align: right;
   color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  
 }
+
+.homebtn {
+  background-color: rgba(30, 143, 255, 0);
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  justify-content: left;
+  align-content: center;
+  width: 100%;
+}
+
+.homebtn i{
+  font-size: 35px;
+}
+
+/* Darker background on mouse-over */
+.homebtn:hover {
+  
+  color: black;
+  
+}
+
+.brand{
+  width: 49%;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.brand h1{
+  font-size: 1.8rem;
+  font-weight: 800;
+  
+}
+
 
 .head {
   padding: 50px;
@@ -137,9 +170,7 @@ a:hover {
   padding: 8px;
 }
 
-.logo {
-  margin-top: 30px;
-}
+
 
 .inner form {
   /* width: 50%; */
@@ -331,13 +362,16 @@ label {
 
 /* footer */
 
-.footerbtn {
+
+
+.footerbtn{
   border: 1px solid white;
-  border-radius: 25px;
-  padding: 13px 18px 13px 18px;
+  border-radius: 28px;
+  padding: 13px 16px 13px 16px;
+  
 }
 
-#footer {
+#footer{
   font-weight: 100;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -348,6 +382,7 @@ label {
 }
 
 /* end footer */
+
 
 @media (max-width: 767px) {
   .inner {
