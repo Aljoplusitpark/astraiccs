@@ -35,6 +35,8 @@
 <div class="head container">
 <h1 >GLITZ</h1><br>
 <h4>FASHION SHOW COMPETITION <br>8th Dec, Astra'23 MainStage 4PM</h4>
+<br>
+<h4 >Payment Status :- Pending</h4>
 </div>
 <div class="wrapper" >
    
@@ -46,7 +48,7 @@
     
     <h4>Rules to follow</h4><br><br>
     <ul>
-        <li>Each team can have 8-10 members. </li>
+        <li>Each team can have 8-10 members.</li>
         <li>Registration fee for a team (per head) - &#8377; 249 </li>
         <li>The maximum duration is 20 minutes (including performance and setup). </li>
         <li>Exceeding the time limit will lead to negative marks </li>
@@ -64,50 +66,74 @@
     </ul>
 <!-- <img src="logo_astra.png" alt="image" width="150px" height="auto" class="logo"> -->
 </div>
-<form action="">
+<form action="glitz_register.php" method="POST" enctype="multipart/form-data">
 <h3>ENTER YOUR DETAILS</h3>
 <div class="form-group">
-<input type="text" placeholder="Team Name / Individual Name" class="form-control">
-<input type="text" placeholder="No of Participants" class="form-control">
+  <input type="text" placeholder="Team Name / Individual Name" name="name"  class="form-control">
+
+  <input type="text" placeholder="No of Participants" id="teamId" onchange="checkTeamId()" name="participants"  class="form-control">
+
 </div>
 
 <div class="form-group">
-    <input type="text" placeholder="E-Mail" class="form-control">
-    <input type="text" placeholder="Phone No." class="form-control">
+  <input type="text" placeholder="E-Mail" name="email_id"  class="form-control">
+  <input type="text" placeholder="Phone No." name="phone"  class="form-control">
 </div>
 <div class="form-group">
-    
-    <input type="text" placeholder="Alternate Phone No." class="form-control">
-    <input type="text" placeholder="State" class="form-control">
+  <input type="text" placeholder="Alternate Phone No." name="alternative"  class="form-control">
+  <input type="text" placeholder="State" name="state"  class="form-control">
 </div>
 
 <div class="form-group">
-    <input type="text" placeholder="District" class="form-control">
-    <input type="text" placeholder="College / Company name" class="form-control">
+  <input type="text" placeholder="District" name="district"  class="form-control">
+  <input type="text" placeholder="College / Company name"  name="college" class="form-control">
 </div>
 
 
 
-<div class="form-wrapper">
+<!-- <div class="form-wrapper">
 <input type="text" placeholder="Team Members name including participants, designers and makeup  artists (for providing certificates) " class="form-control">
  
-</div>
+</div> -->
 
 <div class="pay">
     <h5 class="payh5">Do the payment to : xxxxxxxx@xxx UPI ID 
         and Upload the screenshot Below</h5>
 
-    <h1>&#8377; 2499</h1>    
-    <input type="file" id="upload" hidden/>
-    <label for="upload">Upload Screenshot </label>
+    <h1 id="result"></h1>    
+    <input type="file" id="upload" name="image" hidden/>
+    <label for="upload">Payment Screenshot </label>
 
-    <button>Register</button>
+    <button type="submit" name="submit">Register</button>
     <p>  After registering, you will be getting the ticket confirmation  email within 5-6 hours.<br>
         For Support contact us at ticketing@astraiccs.tech</p>
-
+        
 </div>
 
 </form>
+
+<script>
+    function checkTeamId() {
+      // Get the value of the team ID input
+      var teamIdInput = document.getElementById("teamId");
+      var teamIdValue = parseInt(teamIdInput.value);
+
+      // Get the element where you want to display the result
+      var resultElement = document.getElementById("result");
+
+      // Check the conditions and set the amount accordingly
+      if (teamIdValue >= 0 && teamIdValue <= 1) {
+        resultElement.textContent = "Rs:- 249";
+      } else if (teamIdValue >= 1 && teamIdValue <= 7) {
+        resultElement.textContent = "Team Available in 8 Members";
+      }  else if (teamIdValue > 7 && teamIdValue <= 13) {
+        resultElement.textContent = "RS:- 2499";
+      } else {
+        resultElement.textContent = "Invalid Number";
+      }
+    }
+  </script>
+
 </div>
 </div>
 

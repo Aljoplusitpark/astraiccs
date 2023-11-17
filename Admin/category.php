@@ -103,15 +103,17 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Events </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Games </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> Workshops </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Workshops </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Proshows </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Competitions </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Chakravyuh 2.0 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Glamup </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Innovision </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Events </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Game Master </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Workshops </a></li>
+                
+                <li class="nav-item"> <a class="nav-link" href=""> Proshows </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Competitions </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Chakravyuh 2.0 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="glits.php"> Glitz </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Innovision </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Expo </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Saltatio </a></li>
               </ul>
             </div>
           </li>
