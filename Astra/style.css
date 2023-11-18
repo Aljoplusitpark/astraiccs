@@ -1507,7 +1507,7 @@ input[name="tab"]:checked + .tab-content{
 
 /* mobile-view */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
    
     .navlogo{
         margin-left: 90px;
@@ -1720,7 +1720,7 @@ input[name="tab"]:checked + .tab-content{
    
 
     .service h1 a{
-        font-size: 18px;
+        font-size: 2rem;
         padding-right: 30px;
     }
 

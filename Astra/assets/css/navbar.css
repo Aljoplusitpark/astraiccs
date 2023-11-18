@@ -1,0 +1,74 @@
+.nav-bar-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(247, 247, 247, 0.1);
+    color: white;
+}
+.navbar-social-links ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    text-decoration: none;
+    color:white;
+}
+
+.navbar-social-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+}
+
+.navbar-social-links ul li a:hover{
+    color: #D9EE5F;
+}
+
+.nav-bar-container .fa-bars{
+    display: none;
+}
+
+.navbar-astra-logo{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.navbar-astra-logo h1{
+    font-weight: 800;
+}
+
+.navbar-items{
+    display: none;
+}
+
+@media screen and  (max-width:767px){
+    .nav-bar-container{
+        position: absolute;
+    }
+    .nav-bar-container .fa-bars{
+        display: block;
+    }
+    .navbar-social-links{
+        display: none;
+    }
+    .navbar-social-links.active{
+        width: 100%;
+        display: block;
+        backdrop-filter: blur(15px);
+        background-color: rgb(14, 14, 14);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px;
+    }
+    .navbar-social-links.active ul{
+       display: flex;
+       flex-direction: column;
+    }
+
+    
+}
