@@ -328,7 +328,7 @@ body{
 
 /* mobile-view */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
 
     body{
@@ -339,6 +339,7 @@ body{
     .promain{
 
         display: flex;
+        width: 100%;
         flex-direction: column;
         position: relative;
         justify-content: space-around;
@@ -361,10 +362,27 @@ body{
    
     }
 
+    .promain1 h1{
+        font-size: 30px;
+    }
+
+
+    .probox{
+        width: auto;
+        height: 300px;
+        padding: 15px;
+    }
+
+
+
     .probox1 {
         width: auto;
         height: 300px;
         padding: 15px;
+        
+    }
+    .probox1 img {
+        width: 100%;
         
     }
 

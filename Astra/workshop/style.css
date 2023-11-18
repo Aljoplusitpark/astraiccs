@@ -727,8 +727,8 @@ grid-template-columns: 1fr 1fr;
         margin-top: 50px;
         }
 
-        .glitz-container p{
-            width: 80%;
+    .glitz-container p{
+        width: 80%;
         }        
     
         
@@ -736,6 +736,25 @@ grid-template-columns: 1fr 1fr;
     /* end glitz */
 
     /* team */
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.266); /* Adjust the last value (0.5) to control the overlay opacity */
+        z-index: -1; /* Place the overlay behind the background image */
+    }
+    
+    /* Your existing styles */
+    body {
+        background-image: url('../media/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     
     .ebox{
         
