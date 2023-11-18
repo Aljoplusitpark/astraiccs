@@ -781,8 +781,10 @@ grid-template-columns: 1fr 1fr;
 
     .team-coordinator{
         flex-direction: column;
+        gap: 20px;
         
     }
+
 
     .t3content{
         flex-direction: row;
@@ -795,10 +797,15 @@ grid-template-columns: 1fr 1fr;
 
     .team-media-1{
         flex-direction: column;
+        gap: 20px;
     }
 
-    .staff-cor{
-        
+    .staff-cor h1{
+        text-align: left;
+    }
+
+    .student-cor h1{
+        text-align: left;
     }
 
     /* end team */
