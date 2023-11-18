@@ -104,6 +104,12 @@
       </div>
     </div>
 
+<!-- backtotop -->
+
+<a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
+  
+<!-- end backtotop -->  
+    
     <!-- footer -->
     <div class="footer">
       <footer class="text-center text-white">
@@ -182,6 +188,27 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+<!-- bactotop script -->
+       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+       <script>
+       // ===== Scroll to Top ==== 
+   $(window).scroll(function() {
+       if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+           $('#return-to-top').fadeIn(200);    // Fade in the arrow
+       } else {
+           $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+       }
+   });
+   $('#return-to-top').click(function() {      // When arrow is clicked
+       $('body,html').animate({
+           scrollTop : 0                       // Scroll to top of body
+       }, 500);
+   });
+       </script>   
+       
+<!-- end bactotop script -->
+
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
