@@ -347,10 +347,13 @@
 
                                       
                                       
-                                      echo   "<td><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_category.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a>";
+                                      echo   "<td style='display:flex; flex-wrap:nowrap;'><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_category.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a><br>";
 
 
-                                     echo   '<a href="update_category.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" ><i class="fa fa-edit" ></i></a>
+                                     echo   '
+                                     <form method="GET" action="aprove.php">
+                                        <a href="aprove.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
+                                     </form>
                                             </td></tr>';
                                             $i++;
                                       } 
@@ -361,7 +364,7 @@
                       </table>
                       <?php  
 
-                      $result_db = mysqli_query($con,"SELECT COUNT(ID) FROM event"); 
+                      $result_db = mysqli_query($con,"SELECT COUNT(ID) FROM glitz"); 
                       $row_db = mysqli_fetch_row($result_db);  
                       $total_records = $row_db[0];  
                       $total_pages = ceil($total_records / $limit);
