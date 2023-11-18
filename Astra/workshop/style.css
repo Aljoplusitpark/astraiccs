@@ -625,21 +625,20 @@ grid-template-columns: 1fr 1fr;
 
    /* mobile view */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
    
     .main{
 
         display: flex;
         flex-direction: column;
-        
+        gap: 40px;
         justify-content: space-around;
    
     }
 
     .box1 {
-        width: auto;
+        width: 100%;
         height: auto;
-        padding: 15px;
     }
 
     .button input{
@@ -654,10 +653,8 @@ grid-template-columns: 1fr 1fr;
     
 
     .box2 {
-        width: auto;
+        width: 100%;
         height: auto;
-        padding: 15px;
-        margin-top: 40px;
     }
 
     .brand h1{

@@ -1693,6 +1693,10 @@ input[name="tab"]:checked + .tab-content{
         width: 50px;
         height: auto;
     }
+
+    .c2{
+        margin: 0;
+    }
     
     .c2 p{
         margin-left: 30px;
@@ -1740,12 +1744,12 @@ input[name="tab"]:checked + .tab-content{
     .aboutpara{
         text-align: center;
         padding: 0px;
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .address h4{
     
-       font-size: 18px;
+       font-size: 22px;
     }
 
     .about{
