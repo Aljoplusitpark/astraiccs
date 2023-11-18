@@ -57,6 +57,7 @@ body{
     
 }
 
+
 .navhead{
     width: 300px;
     height: auto;
@@ -82,6 +83,31 @@ body{
     width: 100px;
     height: auto;
 }
+
+
+
+.logo {
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 30px;
+  line-height: 80px;
+  padding: 0 50px;
+  text-shadow: 2px 2px 4px #373636;
+}
+.checkbtn {
+  font-size: 40px;
+  color: aliceblue;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+
 
 .logo{
     width: 49%;
@@ -1481,7 +1507,7 @@ input[name="tab"]:checked + .tab-content{
 
 /* mobile-view */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
    
     .navlogo{
         margin-left: 90px;
@@ -1694,7 +1720,7 @@ input[name="tab"]:checked + .tab-content{
    
 
     .service h1 a{
-        font-size: 18px;
+        font-size: 2rem;
         padding-right: 30px;
     }
 
@@ -1799,3 +1825,5 @@ input[name="tab"]:checked + .tab-content{
 
     
   }
+
+  
