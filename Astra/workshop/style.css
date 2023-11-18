@@ -145,6 +145,8 @@ a{
     background-color: rgba(247, 247, 247, 0.1);
     padding: 50px;
     border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .box1 h5{
@@ -161,6 +163,9 @@ a{
     background-color: rgba(247, 247, 247, 0.1);
     padding: 50px;
     border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
 }
 
 .box2 h5{

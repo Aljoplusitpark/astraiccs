@@ -54,6 +54,7 @@
     }
     .navbar-social-links{
         display: none;
+        
     }
     .navbar-social-links.active{
         width: 100%;
