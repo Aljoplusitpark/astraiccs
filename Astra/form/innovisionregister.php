@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GLITZ REGISTER </title>
+<title>INNOVISION REGISTER </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
  <!-- Font Awesome -->
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
  <!--end font awesome  -->
-  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 <link rel="stylesheet" href="form.css">
 </head>
 <body>
@@ -19,24 +19,21 @@
 <div class="nav">
   <nav class="navbar navbar-light bg-transparent">
     <div class="logo">
-
-      <button class="homebtn" onclick="window.location.href='/Astra/index.html'"><i class="fa fa-home"></i> </button>
-
-
+      <button class="homebtn" onclick="history.back()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
     </div>
     <div class="brand">
-      <h1>ASTRA '23 <br> GLITZ </h1>
-      <img src="logo_astra.png" width="60px" height="auto"  alt="">
+      <h1>
+        ASTRA '23<br />
+        INNOVISION
+      </h1>
+      <img src="logo_astra.png" width="60px" height="auto" alt="" />
     </div>
   </nav>
 </div>
-
 <!-- navbar ends -->
 <div class="head container">
-<h1 >GLITZ</h1><br>
-<h4>FASHION SHOW COMPETITION <br>8th Dec, Astra'23 MainStage 4PM</h4>
-<br>
-<h4 >Payment Status :- Pending</h4>
+<h1 >INNOVISION</h1><br>
+<h4>IDEA PITCHING COMETITION <br>8th December, '23, 11:30AM <br>Diploma Block, ICCSCEM</h4>
 </div>
 <div class="wrapper" >
    
@@ -46,27 +43,51 @@
     
 <div class="image-holder">
     
-    <h4>Rules to follow</h4><br><br>
+    <h4>Innovision - Things to know</h4><br><br>
     <ul>
-        <li>Each team can have 8-10 members.</li>
-        <li>Registration fee for a team (per head) - &#8377; 249 </li>
-        <li>The maximum duration is 20 minutes (including performance and setup). </li>
-        <li>Exceeding the time limit will lead to negative marks </li>
-        <li>Participants should carry copies of their tracks in two pen drives to avoid technical disturbances. </li>
-        <li>Tracks should be submitted at the registration desk in the morning on the day of the competition.</li>
-        <li>The judgement will be primarily based on the design of the costumes, adherence t o the theme, walk, stance, makeup, attitude and overall effects. </li>
-        <li>Registration fee for individual performance - &#8377; 249 </li>
-        <li>For individual performance the competition consist of three rounds, i.e walk with attitude, walk with property used and 
-            questionnare round </li>
-        <li>The performance shouldn't carry inappropriate gestures. </li>
-        <li>Ready-made garments and background narrations are not allowed. </li>
-        <li>Participants age should be between 15 t o 35 </li>
-        <li>The decision of the judges will be final and binding.</li>
-        <li>ID proof Compulsory</li>
+        <li>Innovision is an inter school and college project competition open up for Tenth, Plus Two, Diploma , 
+            B.Tech and Undergraduate students conducting by the ASTRA'23 Tech fest of ICCS CEM, Mupliyam, 
+            Thrissur and is the perfect platform to showcase your ideas. Show up your scientific and technical 
+            skills and grab exciting prizes worth INR 80,0000/- and many more. Why wait? Register now......</li>
+        General Guidelines
+        <li>The interested students have to form a group of maximum 4 members. </li>
+        <li>Each group has to register on the official website, after the registration the confirmation 
+            ticket and a google form will be provided to the registered student.</li>
+        <li>The Project report should include the project title, introduction, application, area of topic,
+            methodology and scope of the project. </li>
+        <li>All the group member names and contact details (Email Id, mobile numbers) have to be provided in the
+            google forms .</li> <br>
+
+        <p style="font-size: 16px; font-weight: 900;"> The project model should be working/non working, prototyped or 
+            implementation on various relevant fields including;</p> <br>
+        <li>Agro Machinery</li>
+        <li>Robotics/ 3D Printing</li>
+        <li>Bio Energy</li>
+        <li>Energy and Management</li>
+        <li>Homeland Security </li>
+        <li>Rural development technology </li>
+        <li>Agro and Food Processing</li>
+        <li>Information technology</li>
+        <li>Other relevant topics</li>
+        <li>The report softcopy has to be uploaded in the google form provided to the registered 
+            student. and the last date to upload the report is 30 November, 2023.</li>
+        <li>The shortlisted projects will be informed via email on 3 December, 2023.</li>
+        <li>There are no registration fees for the Tenth and Plus two level students.</li>
+        <li> The registration fees for Diploma, Btech and Undergraduate students are INR 1000/- 
+            per team.</li>
+        <li>The selected group has to be present on 7th December on ICCS CEM College Campus with their project
+            model.</li>
+        <li>There are attractive prizes for the project competition.</li>
+        <li>Tenth Level Prize Pool INR 8500/-</li>
+        <li>Plus two Level Prize Pool INR 11,500/-</li>
+        <li>Diploma Level Prize Pool INR 30,000/-</li>
+        <li>B.Tech and Undergraduate Level Prize Pool INR 30,000/-</li>
+        <li>Each participating student will get the certificate for participating in the project 
+            competition.</li>
     </ul>
 <!-- <img src="logo_astra.png" alt="image" width="150px" height="auto" class="logo"> -->
 </div>
-<form enctype="multipart/form-data" method="POST" action="glitz_register.php" id="registrationForm" >
+<form enctype="multipart/form-data" method="POST" action="innovision_register.php" id="registrationForm" >
 <h3>ENTER YOUR DETAILS</h3>
 <div class="form-group">
   <input type="text" placeholder="Team Name / Individual Name" name="name"  class="form-control">
@@ -76,11 +97,12 @@
 </div>
 
 <div class="form-group">
-  <input type="text" placeholder="E-Mail" name="email_id"  class="form-control">
+ 
   <input type="text" placeholder="Phone No." name="phone"  class="form-control">
+  <input type="text" placeholder="Alternate Phone No." name="alternative"  class="form-control">
 </div>
 <div class="form-group">
-  <input type="text" placeholder="Alternate Phone No." name="alternative"  class="form-control">
+   <input type="text" placeholder="E-Mail" name="email_id"  class="form-control">
   <input type="text" placeholder="State" name="state"  class="form-control">
 </div>
 
@@ -88,9 +110,14 @@
   <input type="text" placeholder="District" name="district"  class="form-control">
   <input type="text" placeholder="College / Company name"  name="college" class="form-control">
 </div>
+<div class="form-group">
+  <input type="text" placeholder="Project" name="projects"  class="form-control">
+  <!-- <input type="text" placeholder="College / Company name"  name="college" class="form-control"> -->
+</div>
+
 <div class="form-group" style="display:none;">
   <input type="text" placeholder="Code"  name="code" id="code" class="form-control">
-  <input type="hidden" name="qrcode" id="qr-code" class="form-control">
+  <input type="text" name="qrcode" id="qr-code" class="form-control">
 </div>
 
 
@@ -114,7 +141,6 @@
 </div>
   <div id="qrcode" style="display:none;"></div>
 </form>
-
 <script>
  
   function generateRandomCode() {
@@ -155,8 +181,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   qrcodeImage.src = qrcodeCanvas.toDataURL("image/png");
 
   // Now, you can use the 'qrcodeImage.src' variable as needed
+  console.log(qrcodeImage.src);
   document.getElementById("qr-code").value = extractBase64FromDataUrl(qrcodeImage.src);
-
 });
 
 function extractBase64FromDataUrl(dataUrl) {
@@ -172,7 +198,6 @@ function extractBase64FromDataUrl(dataUrl) {
     // Extract and return the base64 part
     return matches[2];
 }
-
 
     function checkTeamId() {
       // Get the value of the team ID input
@@ -194,7 +219,6 @@ function extractBase64FromDataUrl(dataUrl) {
       }
     }
   </script>
-  
 </div>
 </div>
 
