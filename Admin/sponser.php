@@ -69,14 +69,14 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="category.php">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
               <span class="menu-title">Category</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item menu-items">
             <a class="nav-link" href="banner.php">
               <span class="menu-icon">
@@ -277,7 +277,27 @@
             <div class="row">
 
               <!--  -->
-
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                   
+                    <!-- <p class="card-description"> Events </p> -->
+                    <form class="forms-sample" action="sponser_action.php" method="POST" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <label for="name">Sponser Name</label>
+                        <input type="text" class="form-control" name="name" required   id="exampleInputName1" placeholder="Event Name">
+                      </div>
+                      <div class="form-group">
+                          <label for="image">Image</label>
+                          <input type="file" class="form-control" name="image"  required  id="exampleInputName1" placeholder="Organization UPI">
+                        </div>
+                      
+                      <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
+                      <button class="btn btn-dark"><a href="index.php" class="nav-link">Cancel</a></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
