@@ -1,6 +1,11 @@
 <?php
 include("./connection/config.php");
-
+error_reporting(0);
+session_start();
+  if($_SESSION['username'] != 'admin'){
+        header("location:login.php");
+        die();
+     }
 // Make sure to sanitize user input to prevent SQL injection
 $updId = mysqli_real_escape_string($con, $_GET['upd']);
 $itemType = isset($_GET['itemType']) ? $_GET['itemType'] : '';
@@ -57,6 +62,7 @@ while ($rows = mysqli_fetch_array($query)) {
 
     if ($mailSent) {
         echo "Email sent successfully";
+        
     } else {
         echo "Email sending failed.";
     }

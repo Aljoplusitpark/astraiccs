@@ -4,10 +4,10 @@
     include("connection/config.php");
     error_reporting(0);
     session_start();
-      // if($_SESSION['username'] != 'admin'){
-      //       header("location:login.php");
-      //       die();
-      //    }
+      if($_SESSION['username'] != 'admin'){
+            header("location:login.php");
+            die();
+         }
 ?>
   <head>
     <!-- Required meta tags -->
@@ -37,11 +37,11 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo_astra.png" alt="logo" 
+          <a class="sidebar-brand brand-logo" href="index.php"><img src="assets/images/logo_astra.png" alt="logo" 
             style="width: 30px; height: 30px; color: white;"/>
             &ensp;ASTRA'23
           </a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.php"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -56,13 +56,13 @@
                   <!-- <span>Gold Member</span> -->
                 </div>
               </div>
-              
+             
           </li>
           <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
@@ -103,17 +103,15 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href=""> Events </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Game Master </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Workshops </a></li>
-                
+                <li class="nav-item"> <a class="nav-link" href="#"> Events </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Games </a></li>
+                <li class="nav-item"> <a class="nav-link" href="workshop.php"> Workshops </a></li>
                 <li class="nav-item"> <a class="nav-link" href=""> Proshows </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Competitions </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Chakravyuh 2.0 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Competitions </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Chakravyuh 2.0 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Glamup </a></li>
                 <li class="nav-item"> <a class="nav-link" href="glits.php"> Glitz </a></li>
                 <li class="nav-item"> <a class="nav-link" href="innovision.php"> Innovision </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Expo </a></li>
-                <li class="nav-item"> <a class="nav-link" href=""> Saltatio </a></li>
               </ul>
             </div>
           </li>
@@ -122,7 +120,14 @@
           
 
           
-          
+          <!-- <li class="nav-item menu-items">
+            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.php">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li> -->
         </ul>
       </nav>
       <!-- partial -->
@@ -246,7 +251,7 @@
                   <h6 class="p-3 mb-0">Profile</h6>
                   
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
+                  <a class="dropdown-item preview-item" href="logout.php">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">
                         <i class="mdi mdi-logout text-danger"></i>
@@ -354,7 +359,7 @@
 
                                      echo   '
                                      
-                                        <a href="aprove_innovision.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
+                                        <a href="aprove.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
                                      
                                             </td></tr>';
                                             $i++;
