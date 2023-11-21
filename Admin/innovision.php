@@ -296,7 +296,7 @@
                           };  
                           //$name=$_SESSION['Emp_Name'];
                         $start_from = ($currentpage * $limit) - $limit;  
-                        $result = mysqli_query($con,"SELECT * FROM glitz ORDER BY id desc LIMIT $start_from, $limit");
+                        $result = mysqli_query($con,"SELECT * FROM innovision ORDER BY id desc LIMIT $start_from, $limit");
                         ?>
                       <table class="table table-striped">
                         <thead>
@@ -310,6 +310,7 @@
                             <th> State </th>
                             <th> District </th>
                             <th> College Name  </th>
+                            <th> Project Name </th>
                             <th> Payment Details</th>
                             <th> Action </th>
                           </tr>
@@ -344,11 +345,16 @@
                                             <td>'.$rows['state'].'</td>
                                             <td>'.$rows['district'].'</td>
                                             <td>'.$rows['college_name'].'</td>
-                                            <td><img src="../Astra/form/glitz/'.$rows['image'].'" style="width :50px; height:50px;"></td>
+                                            <td>'.$rows['project_name'].'</td>
+                                            <td><img src="../Astra/form/innovision/'.$rows['image'].'" style="width :50px; height:50px;"></td>
                                             '
 
                                             ;
-                                    echo   "<td style='display:flex; flex-wrap:nowrap;'><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_glitz.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a><br>";
+                                            
+
+                                      
+                                      
+                                      echo   "<td style='display:flex; flex-wrap:nowrap;'><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_innovision.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a><br>";
 
 
                                      echo   '

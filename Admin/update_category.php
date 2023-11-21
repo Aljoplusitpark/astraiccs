@@ -37,11 +37,11 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo_astra.png" alt="logo" 
+          <a class="sidebar-brand brand-logo" href="index.php"><img src="assets/images/logo_astra.png" alt="logo" 
             style="width: 30px; height: 30px; color: white;"/>
             &ensp;ASTRA'23
           </a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.php"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -56,41 +56,41 @@
                   <!-- <span>Gold Member</span> -->
                 </div>
               </div>
-              
+             
           </li>
           <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item menu-items active">
-            <a class="nav-link" href="category.html">
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="category.php">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
               <span class="menu-title">Category</span>
             </a>
           </li>
-          <li class="nav-item menu-items ">
-            <a class="nav-link" href="banner.html">
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="banner.php">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
               <span class="menu-title">Banner</span>
             </a>
           </li>
-          <li class="nav-item menu-items ">
-            <a class="nav-link" href="subscribe.html">
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="sponser.php">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">Subscribe</span>
+              <span class="menu-title">Sponsers</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -103,15 +103,15 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Events </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Games </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> Workshops </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Workshops </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Proshows </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Competitions </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Chakravyuh 2.0 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Glamup </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Innovision </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Events </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Games </a></li>
+                <li class="nav-item"> <a class="nav-link" href="workshop.php"> Workshops </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Proshows </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Competitions </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Chakravyuh 2.0 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Glamup </a></li>
+                <li class="nav-item"> <a class="nav-link" href="glits.php"> Glitz </a></li>
+                <li class="nav-item"> <a class="nav-link" href="innovision.php"> Innovision </a></li>
               </ul>
             </div>
           </li>
@@ -120,7 +120,14 @@
           
 
           
-          
+          <!-- <li class="nav-item menu-items">
+            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.php">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li> -->
         </ul>
       </nav>
       <!-- partial -->
@@ -341,7 +348,7 @@
                         <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
                       </div> -->
                       <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
-                      <button class="btn btn-dark">Cancel</button>
+                      <button class="btn btn-dark"><a href="category.php" class="nav-link">Cancel</a></button>
                     </form>
                   </div>
                 </div>

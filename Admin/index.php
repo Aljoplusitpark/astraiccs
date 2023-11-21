@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <?php
     include("connection/config.php");
     error_reporting(0);
@@ -9,6 +8,7 @@
             die();
          }
 ?>
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,11 +30,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/logo_astra.png" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   </head>
   <body >
     <div class="container-scroller">
-      <!-- partial:partials/_sidebar.html -->
+      <!-- partial:partials/_sidebar.php -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
           <a class="sidebar-brand brand-logo" href="index.php"><img src="assets/images/logo_astra.png" alt="logo" 
@@ -132,10 +131,10 @@
       </nav>
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_navbar.html -->
+        <!-- partial:partials/_navbar.php -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.php"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
           </div>
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -275,136 +274,185 @@
           <div class="content-wrapper">
             
             <div class="row">
-
-             
-
-              <div class="col-lg-12 grid-margin stretch-card">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Event</h4>
-                    <!-- <p class="card-description"> Add class <code>.table-striped</code> -->
-                    </p>
-                    <div class="table-responsive">
+                    <div class="row">
                       <?php 
-                        // include ("connection/config.php");
-                        $limit = 10;  
-                        if (isset($_GET["page"]) && !empty($_GET['page'])) {
-                          $currentpage  = $_GET["page"]; 
-                          } 
-                          else{ 
-                          $currentpage = 1;
-                          };  
-                          //$name=$_SESSION['Emp_Name'];
-                        $start_from = ($currentpage * $limit) - $limit;  
-                        $result = mysqli_query($con,"SELECT * FROM glitz ORDER BY id desc LIMIT $start_from, $limit");
-                        ?>
-                      <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th> ID </th>
-                            <th> Name </th>
-                            <th> Participants </th>
-                            <th> Email Id </th>
-                            <th> Phone Number </th>
-                            <th> Alternative Number</th>
-                            <th> State </th>
-                            <th> District </th>
-                            <th> College Name  </th>
-                            <th> Payment Details</th>
-                            <th> Action </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <?php
-                                 // $sql="SELECT * FROM sub_category order by sub_cat_id desc";
-                                 // $query=mysqli_query($con,$sql);
-                                 $i=1; 
-                                if(!mysqli_num_rows($result) > 0 )
-                                  {
-                                    echo '<td colspan="7"><center>No Category-Data!</center></td>';
-                                  }
-                                else
-                                  {  
-                                        
-                                    while($rows=mysqli_fetch_array($result))
-                                    {
-                                        
-                                        
-                                         
-                                           
-                                          
 
-                                      echo ' <tr>
-                                            <td>'.$i.'</td>
-                                            <td>'.$rows['name'].'</td>
-                                            <td>'.$rows['participant'].'</td>
-                                            <td>'.$rows['email_id'].'</td>
-                                            <td>'.$rows['phone_number'].'</td>
-                                            <td>'.$rows['alternative'].'</td>
-                                            <td>'.$rows['state'].'</td>
-                                            <td>'.$rows['district'].'</td>
-                                            <td>'.$rows['college_name'].'</td>
-                                            <td><img src="../Astra/form/glitz/'.$rows['image'].'" style="width :50px; height:50px;"></td>
-                                            '
-
-                                            ;
-                                    echo   "<td style='display:flex; flex-wrap:nowrap;'><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_glitz.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a><br>";
-
-
-                                     echo   '
-                                     
-                                        <a href="aprove.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
-                                     
-                                            </td></tr>';
-                                            $i++;
-                                      } 
-                                      
-                                  }
-                                ?>
-                        </tbody>
-                      </table>
-                      <?php  
-
-                      $result_db = mysqli_query($con,"SELECT COUNT(ID) FROM glitz"); 
-                      $row_db = mysqli_fetch_row($result_db);  
-                      $total_records = $row_db[0];  
-                      $total_pages = ceil($total_records / $limit);
-                      $firstpage = 1;
-                      $nextPage = $currentpage + 1;
-                      $previousPage = $currentpage - 1; 
-                      /* echo  $total_pages; */
-                      // $pagLink = "<ul class='pagination'>";  
-                      // for ($i=1; $i<=$total_pages; $i++) {
-                      //               $pagLink .= "<li class='page-item'><a class='page-link' href='top_link_view.php?page=".$i."'>".$i."</a></li>"; 
-                      // }
-                      // echo $pagLink . "</ul>";  
-                      ?>
-                      <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                        <?php if($currentpage != $firstpage) { ?>
-                          <li class="page-item">
-                          <a class="page-link" href="?page=<?php echo $firstpage ?>" tabindex="-1" aria-label="Previous">
-                            <span aria-hidden="true">First</span>     
-                          </a>
-                          </li>
-                          <?php } ?>
-                          <?php if($currentpage >= 2) { ?>
-                            <li class="page-item"><a class="page-link" href="?page=<?php echo $previousPage ?>"><?php echo $previousPage ?></a></li>
-                          <?php } ?>
-                          <li class="page-item active"><a class="page-link" href="?page=<?php echo $currentpage ?>"><?php echo $currentpage ?></a></li>
-                          <?php if($currentpage != $total_pages) { ?>
-                            <li class="page-item"><a class="page-link" href="?page=<?php echo $nextPage ?>"><?php echo $nextPage ?></a></li>
-                            <li class="page-item">
-                            <a class="page-link" href="?page=<?php echo $total_pages ?>" aria-label="Next">
-                              <span aria-hidden="true">Last</span>
-                            </a>
-                            </li>
-                          <?php } ?>
-                          
-                        </ul>
-                        
-                      </nav>
+                        $sql="select * from event";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
                     </div>
+                    <h6 class="text-muted font-weight-normal">Event</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <?php 
+
+                        $sql="select * from workshop where verified=0;";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-danger">
+                          <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Workshop Registration</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <?php 
+
+                        $sql="select * from workshop where verified=1;";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Workshop Registration</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <?php 
+
+                        $sql="select * from innovision where verified=0;";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-danger">
+                          <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Innovision Registration</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <?php 
+
+                        $sql="select * from innovision where verified=1;";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Innovision Registration</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <?php 
+
+                        $sql="select * from glitz where verified=0;";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-danger">
+                          <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Glitz Registration</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <?php 
+
+                        $sql="select * from glitz where verified=1;";
+                            $result=mysqli_query($con,$sql); 
+                            $rws=mysqli_num_rows($result);
+                       ?>
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0"><?php echo $rws; ?></h3>
+                          <!-- <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p> -->
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="text-muted font-weight-normal">Glitz Registration</h6>
                   </div>
                 </div>
               </div>
@@ -417,10 +465,10 @@
            
           </div>
           <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
+          <!-- partial:partials/_footer.php -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Plus IT Business Park 2023</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
             </div>
           </footer>
           <!-- partial -->

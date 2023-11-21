@@ -276,12 +276,12 @@
             
             <div class="row">
 
-             
+              <!--  -->
 
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Event</h4>
+                    <h4 class="card-title">Sponser</h4>
                     <!-- <p class="card-description"> Add class <code>.table-striped</code> -->
                     </p>
                     <div class="table-responsive">
@@ -296,22 +296,16 @@
                           };  
                           //$name=$_SESSION['Emp_Name'];
                         $start_from = ($currentpage * $limit) - $limit;  
-                        $result = mysqli_query($con,"SELECT * FROM glitz ORDER BY id desc LIMIT $start_from, $limit");
+                        $result = mysqli_query($con,"SELECT * FROM sponser ORDER BY id desc LIMIT $start_from, $limit");
                         ?>
                       <table class="table table-striped">
                         <thead>
                           <tr>
                             <th> ID </th>
                             <th> Name </th>
-                            <th> Participants </th>
-                            <th> Email Id </th>
-                            <th> Phone Number </th>
-                            <th> Alternative Number</th>
-                            <th> State </th>
-                            <th> District </th>
-                            <th> College Name  </th>
-                            <th> Payment Details</th>
-                            <th> Action </th>
+                            <th> Image </th>
+                            
+                            <th> Action  </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -337,25 +331,15 @@
                                       echo ' <tr>
                                             <td>'.$i.'</td>
                                             <td>'.$rows['name'].'</td>
-                                            <td>'.$rows['participant'].'</td>
-                                            <td>'.$rows['email_id'].'</td>
-                                            <td>'.$rows['phone_number'].'</td>
-                                            <td>'.$rows['alternative'].'</td>
-                                            <td>'.$rows['state'].'</td>
-                                            <td>'.$rows['district'].'</td>
-                                            <td>'.$rows['college_name'].'</td>
-                                            <td><img src="../Astra/form/glitz/'.$rows['image'].'" style="width :50px; height:50px;"></td>
-                                            '
+                                            <td>'.$rows['image'].'</td>'
 
                                             ;
-                                    echo   "<td style='display:flex; flex-wrap:nowrap;'><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_glitz.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a><br>";
+                                            
 
-
-                                     echo   '
-                                     
-                                        <a href="aprove.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
-                                     
-                                            </td></tr>';
+                                      
+                                      
+                                      echo   "<td><a  onClick=\"javascript:return confirm('Do you wants to delete this?');\" href='delete_sponser.php?cat_del=".$rows['id']."' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'  style='font-size:15px; padding:5px;'><i class='fa fa-trash'></i></a>
+                                            </td></tr>" ;
                                             $i++;
                                       } 
                                       
@@ -365,7 +349,7 @@
                       </table>
                       <?php  
 
-                      $result_db = mysqli_query($con,"SELECT COUNT(ID) FROM glitz"); 
+                      $result_db = mysqli_query($con,"SELECT COUNT(ID) FROM banner"); 
                       $row_db = mysqli_fetch_row($result_db);  
                       $total_records = $row_db[0];  
                       $total_pages = ceil($total_records / $limit);
