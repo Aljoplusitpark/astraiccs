@@ -20,7 +20,7 @@
   <nav class="navbar navbar-light bg-transparent">
     <div class="logo">
 
-      <button class="homebtn" onclick="window.location.href='/Astra/index.html'"><i class="fa fa-home"></i> </button>
+      <button class="homebtn" onclick="history.back()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
 
 
     </div>
