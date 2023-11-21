@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // Example usage
   var dataToEncode = randomCode; // Replace with your data
-  var qrcodeCanvas = await generateQRCode(dataToEncode);
+  var qrcodeCanvas = await generateQRCode("https://astraiccs.tech/verify.php?code="+dataToEncode+"&itemType=glitz");
 
   // Convert the canvas to an image
   var qrcodeImage = new Image();

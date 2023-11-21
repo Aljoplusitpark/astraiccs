@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
     $district = isset($_POST['district']) ? $_POST['district'] : '';
     $college = isset($_POST['college']) ? $_POST['college'] : '';
     $code = isset($_POST['code']) ? $_POST['code'] : '';
+    $verify = 0;
     
     // Retrieve file input values (payment screenshot and QR code)
     $image = isset($_FILES['image']['name']) ? $_FILES['image']['name'] : '';
@@ -38,8 +39,7 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile);
 
     // SQL INSERT statement
-    $sql = "INSERT INTO glitz (name, participant, email_id, phone_number, alternative, state, district, college_name, image, code, qrcode) 
-            VALUES ('$name', '$participants', '$email_id', '$phone', '$alternative', '$state', '$district', '$college', '$image', '$code', '$qrcodeFileName')";
+    $sql = "INSERT INTO glitz (name, participant, email_id, phone_number, alternative, state, district, college_name, image, code, qrcode, verified) VALUES ('$name', '$participants', '$email_id', '$phone', '$alternative', '$state', '$district', '$college', '$image', '$code', '$qrcodeFileName', '$verify')";
 
     // Execute the SQL query
     if (mysqli_query($con, $sql)) {

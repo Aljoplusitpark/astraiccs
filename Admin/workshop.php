@@ -291,22 +291,24 @@
                           };  
                           //$name=$_SESSION['Emp_Name'];
                         $start_from = ($currentpage * $limit) - $limit;  
-                        $result = mysqli_query($con,"SELECT * FROM glitz ORDER BY id desc LIMIT $start_from, $limit");
+                        $result = mysqli_query($con,"SELECT * FROM workshop ORDER BY id desc LIMIT $start_from, $limit");
                         ?>
                       <table class="table table-striped">
                         <thead>
                           <tr>
                             <th> ID </th>
                             <th> Name </th>
-                            <th> Participants </th>
-                            <th> Email Id </th>
-                            <th> Phone Number </th>
-                            <th> Alternative Number</th>
                             <th> State </th>
+                            <th> Phone Number </th>
                             <th> District </th>
-                            <th> College Name  </th>
-                            <th> Payment Details</th>
-                            <th> Action </th>
+                            <th> Email</th>
+                            <th> Course </th>
+                            <th> College Name </th>
+                            <th> Branch </th>
+                            <th> Years</th>
+                            <th> Semester </th>
+                            <th> Workshop</th>
+                            <th>Image</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -332,14 +334,17 @@
                                       echo ' <tr>
                                             <td>'.$i.'</td>
                                             <td>'.$rows['name'].'</td>
-                                            <td>'.$rows['participant'].'</td>
-                                            <td>'.$rows['email_id'].'</td>
-                                            <td>'.$rows['phone_number'].'</td>
-                                            <td>'.$rows['alternative'].'</td>
                                             <td>'.$rows['state'].'</td>
+                                            <td>'.$rows['phone'].'</td>
                                             <td>'.$rows['district'].'</td>
+                                            <td>'.$rows['email_id'].'</td>
+                                            <td>'.$rows['course'].'</td>
                                             <td>'.$rows['college_name'].'</td>
-                                            <td><img src="../Astra/form/glitz/'.$rows['image'].'" style="width :50px; height:50px;"></td>
+                                            <td>'.$rows['branch'].'</td>
+                                            <td>'.$rows['years'].'</td>
+                                            <td>'.$rows['semester'].'</td>
+
+                                            <td><a href="../Astra/form/workshop/'.$rows['images'].'" target="__blank"><img src="../Astra/form/workshop/'.$rows['images'].'" style="width :50px; height:50px;"></a></td>
                                             '
 
                                             ;
@@ -348,7 +353,7 @@
 
                                      echo   '
                                      
-                                        <a href="aprove.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
+                                        <a href="aprove_workshop.php?upd='.$rows['id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="font-size:15px; margin-left:5px; padding:5px;" >Aproved</a>
                                      
                                             </td></tr>';
                                             $i++;
