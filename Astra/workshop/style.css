@@ -80,6 +80,10 @@ a{
     
 }
 
+.brand img{
+    width: 100px;
+}
+
 .marquee{
 
     background-color: #D9EE5F;
@@ -140,13 +144,14 @@ a{
 
 .box1{
     width: 49%;
-    height: 650px;
+    height: 700px;
     backdrop-filter: blur(15px);
     background-color: rgba(247, 247, 247, 0.1);
     padding: 50px;
     border-radius: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
+    gap: 20px;
 }
 
 .box1 h5{
@@ -158,22 +163,56 @@ a{
 
 .box2{
     width: 49%;
-    height: 650px;
+    height: 700px;
     backdrop-filter: blur(15px);
     background-color: rgba(247, 247, 247, 0.1);
     padding: 50px;
     border-radius: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
+    gap: 20px;
     
 }
 
 .box2 h5{
-    margin-top: 30px;
+    
     padding-right: 20px;
     font-weight: 200;
     line-height: 1.4;
 }
+
+.box2 li{
+    
+    padding-right: 20px;
+    font-weight: 200;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    
+}
+.box1 li{
+    margin-top: 30px;
+    padding-right: 20px;
+    font-weight: 200;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    
+}
+
+.box2 ul{
+    line-height: 1;
+}
+
+/* workshop */
+
+.workshop-time p{
+    font-weight: 300;
+    line-height: 1;
+    font-size: 1.2rem;
+
+}
+
+/* workshop  */
+
   
 .button{
     height: 50px;
@@ -638,12 +677,20 @@ grid-template-columns: 1fr 1fr;
         flex-direction: column;
         gap: 40px;
         justify-content: space-around;
-   
+        padding: 20px;
     }
 
     .box1 {
         width: 100%;
         height: auto;
+        padding: 30px;
+    }
+    .box1 h5 {
+        padding: 0;
+    }
+
+    .box1 img{
+        width: 80%;
     }
 
     .button input{
@@ -660,10 +707,19 @@ grid-template-columns: 1fr 1fr;
     .box2 {
         width: 100%;
         height: auto;
+        padding: 30px;
+    }
+
+    .box2 h5 {
+        padding: 0;
+    }
+
+    .box2 img{
+        width: 80%;
     }
 
     .brand h1{
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 800;
         text-align: center;
     }
@@ -673,7 +729,15 @@ grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
 
-    
+    .brand img{
+        width: 25%;
+    }
+
+
+
+    .nav{
+        padding: 0;
+    }
     
 
 
@@ -732,8 +796,13 @@ grid-template-columns: 1fr 1fr;
         margin-top: 50px;
         }
 
+    .glitz-container{
+        width: 100%;
+        padding: 30px;
+        }
+
     .glitz-container p{
-        width: 80%;
+        width: 100%;
         }        
     
         
@@ -819,5 +888,38 @@ grid-template-columns: 1fr 1fr;
         display: grid;
         grid-template-columns: 1fr;
         }
+
+    /* competitons */
+
+    
+
+    .chead h1{
+        font-size: 30px;
+        
+    }
+
+    .chead1 h1{
+        font-size: 40px;
+        text-align: left;
+        line-height: 1.2;
+    }
+
+    .chead1 {
+        padding: 20px;
+    }
+
+    /* end */
+
+    /* footer */
+
+
+    .footerbtn{
+        padding: 10px;
+        border: none;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    /* end footer */
 
    }

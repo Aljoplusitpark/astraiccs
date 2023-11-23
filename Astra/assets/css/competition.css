@@ -1,0 +1,112 @@
+.competition-main{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-around;
+    padding: 20px;
+
+}
+
+.competition-section{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+}
+
+.competition-section h5{
+    padding: 0;
+}
+
+.section-left{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(247, 247, 247, 0.1);
+    border-radius: 35px;
+
+}
+
+.section-left h1{
+    
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 20px;
+    
+}
+
+.section-right{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(247, 247, 247, 0.1);
+    border-radius: 35px;
+
+}
+
+.section-right h1{
+    
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.btn {
+    color: rgb(0, 0, 0);
+    background-color: #D9EE5F;
+    
+    
+  }
+
+  .btn:hover {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #000000;
+}
+
+
+/* mobile-view */
+
+@media only screen and (max-width: 700px) {
+
+    .competition-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-left{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .section-left h1{
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+    .section-right{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .section-right h1{
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+
+}   

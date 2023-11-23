@@ -8,6 +8,7 @@
     backdrop-filter: blur(15px);
     background-color: rgba(247, 247, 247, 0.1);
     color: white;
+    
 }
 .navbar-social-links ul{
     display: flex;
@@ -35,10 +36,15 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
 .navbar-astra-logo h1{
     font-weight: 800;
+}
+.navbar-astra-logo img{
+    width: 50px;
+    height: auto;
 }
 
 .nav-item{
@@ -114,6 +120,15 @@
         padding: 20px;
         justify-content: center;
         align-items: center;
+    }
+
+    .navbar-astra-logo h1{
+        font-size: 1.3rem;
+    }
+
+    .navbar-astra-logo img{
+        width: 30px;
+        height: auto;
     }
 
     
