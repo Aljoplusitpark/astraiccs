@@ -13,46 +13,7 @@ body{
 /* proshow */
 
 
-.nav{
-    backdrop-filter: blur(15px);
-    background-color: rgba(247, 247, 247, 0.1);
-    padding: 5px 50px 5px 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
 
-/* .navbar{
-    
-    height: auto;
-    padding: 20px 50px 20px 50px;
-    
-} */
-
-.logo{
-    width: 49%;
-    text-align: left;
-    float: left;
-    
-    
-}
-
-.navlogo{
-    width: 80px;
-    height: auto;
-    justify-content: left;
-    text-align: left;
-    margin-left: 30px;
-}
-
-.brand{
-    width: 49%;
-    justify-content: right;
-    text-align: right;
-    color: white;
-    /* background-color: #000; */
-}
 
 .protxt{
     padding: 30px;
@@ -181,12 +142,12 @@ body{
     color: rgba(255, 255, 255, 0);
 }
 
-.button{
+.proshow-button{
     height: 45px;
     margin: 35px 0;
     text-align: right;
   }
-.button input{
+.proshow-button input{
     height: 100%;
     width: 30%;
     border-radius: 20px;
@@ -201,7 +162,7 @@ body{
     background-color: #D9EE5F;
     
   }
-.button input:hover{
+.proshow-button input:hover{
    /* transform: scale(0.99); */
    background-color: #000000;
    color: #D9EE5F;
@@ -347,6 +308,10 @@ body{
    
     }
 
+    .protxt h1{
+        font-size: 30px;
+    }
+
     .promain h1{
         font-size: 30px;
     }
@@ -373,7 +338,10 @@ body{
         padding: 15px;
     }
 
-
+    .probox img {
+        width: 100%;
+        
+    }
 
     .probox1 {
         width: auto;
@@ -382,17 +350,24 @@ body{
         
         
     }
+
+
     .probox1 img {
         width: 100%;
         
     }
 
-    .button{
+    .proshow-button{
         width: 500px;
         margin-left: -180px;
         margin-top: 130px;
         /* display: none; */
 
+    }
+
+    .proshow-button input{
+        width: 30%;
+        margin-right: 27%;
     }
 
     .probox2 {
@@ -404,6 +379,12 @@ body{
         
     }
 
+
+    .probox2 img {
+        width: 100%;
+        
+    }
+
     .probox3 {
         width: auto;
         height: 300px;
@@ -411,11 +392,23 @@ body{
         margin-top: -10px;
     }
 
+
+    .probox3 img {
+        width: 100%;
+        
+    }
+
     .probox4 {
         width: auto;
         height: 300px;
         padding: 15px;
         margin-top: 20px;
+    }
+
+
+    .probox4 img {
+        width: 100%;
+        
     }
 
     .marquee2{
@@ -437,5 +430,12 @@ body{
     .day1img{
        display: none;
     }
+
+    
+
+    .nav{
+        padding: 0;
+    }
+    
 
 }
