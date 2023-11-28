@@ -1549,12 +1549,16 @@ input[name="tab"]:checked + .tab-content{
         width: 100%;
    
     }
+
+    .logo-content{
+        padding: 20px;
+    }
     
     .logo-content h1{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .logo-content img{
-        width: 80px;
+        width: 60px;
     }
     .home-content-text{
         text-align: center;
@@ -1564,7 +1568,7 @@ input[name="tab"]:checked + .tab-content{
     }
     .home-content-text p{
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
 
     }
 
@@ -1736,18 +1740,23 @@ input[name="tab"]:checked + .tab-content{
     }
 
     .aboutus{
-        padding: 40px;
+        padding: 10px;
     }
 
     .aboutpara{
-        text-align: center;
+        text-align: justify;
         padding: 0px;
         font-size: 22px;
+    }
+
+    .address{
+        padding: 20px;
     }
 
     .address h4{
     
        font-size: 22px;
+       text-align: justify;
     }
 
     .about{
@@ -1757,6 +1766,7 @@ input[name="tab"]:checked + .tab-content{
     .mission{
         text-align: center;
         color: rgb(255, 255, 255);
+        padding: 10px;
     }
 
     .mission h1{
@@ -1767,6 +1777,7 @@ input[name="tab"]:checked + .tab-content{
     .vision{
         text-align: center;
         color: rgb(255, 255, 255);
+        padding: 10px;
     }
 
     .vision h1{
